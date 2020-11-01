@@ -1,0 +1,18 @@
+{
+  "name": "weak_wrap",
+  "version": "0.0.1",
+  "author": "Nkowne63 <neutron63zf@gmail.com>",
+  "dependencies": {
+    "@types/node": "^14.14.6",
+    "prettier": "^2.1.2",
+    "ts-node": "^9.0.0",
+    "tsconfig-paths": "^3.9.0",
+    "typescript": "^4.0.5"
+  },
+  "license": "MIT",
+  "main": "index.js",
+  "private": true,
+  "scripts": {
+    "ts": "ts-node -r tsconfig-paths/register"
+  }
+}
