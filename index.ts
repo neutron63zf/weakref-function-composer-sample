@@ -20,6 +20,25 @@ console.log('result', h(1, 2))
 
 console.log('----')
 
+const bf = (a: number, b: number) => a * b
+
+const bg1 = (f1: () => number) => {
+  const a = f1()
+  console.log('mul by 2:', a * 2)
+}
+
+const bg2 = (f1: () => number) => {
+  const a = f1()
+  wrapped(f)(2, 3)
+  console.log('mul by 2:', a * 2)
+}
+
+inject(bf, [bg1, bg2])
+
+console.log('result', wrapped(bf)(1, 3))
+
+console.log('----')
+
 const af = (a: number, b: number) => Promise.resolve(a + b)
 
 // -> type error
